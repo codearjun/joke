@@ -53,9 +53,10 @@ const cors = require("cors");
 const app = express();
 const port = 4000;
 
-app.use(cors());
+//app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors({ origin: "*" }));
 
 let products = [
   { id: 1, title: "joke 1" },
